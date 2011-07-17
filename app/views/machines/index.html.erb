@@ -2,15 +2,15 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Place</th>
     <th>Ipaddr</th>
+    <th>Name</th>
     <th>Fqdn</th>
     <th>Description</th>
-    <th>Note</th>
-    <th>Old ipaddr</th>
     <th>User</th>
     <th>Department</th>
-    <th>Place</th>
+    <th>Note</th>
+    <th>Old ipaddr</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,15 +18,15 @@
 
 <% @machines.each do |machine| %>
   <tr>
-    <td><%= machine.name %></td>
+    <td><%= machine.place.name %></td>
     <td><%= machine.ipaddr %></td>
+    <td><%= machine.name %></td>
     <td><%= machine.fqdn %></td>
     <td><%= machine.description %></td>
+    <td><%= machine.user.name %></td>
+    <td><%= machine.department.name %></td>
     <td><%= machine.note %></td>
     <td><%= machine.old_ipaddr %></td>
-    <td><%= machine.user_id %></td>
-    <td><%= machine.department_id %></td>
-    <td><%= machine.place_id %></td>
     <td><%= link_to 'Show', machine %></td>
     <td><%= link_to 'Edit', edit_machine_path(machine) %></td>
     <td><%= link_to 'Destroy', machine, :confirm => 'Are you sure?', :method => :delete %></td>
