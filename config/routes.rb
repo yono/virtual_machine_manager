@@ -1,4 +1,6 @@
 VirtualMachineManager::Application.routes.draw do
+  resources :users
+
   resources :machines
 
   # The priority is based upon order of creation:
