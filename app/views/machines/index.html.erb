@@ -18,13 +18,13 @@
 
 <% @machines.each do |machine| %>
   <tr>
-    <td><%= machine.place.name %></td>
+    <td><%= link_to machine.place.name, {:controller => :places, :action => :show, :id => machine.place.id} %></td>
     <td><%= machine.ipaddr %></td>
     <td><%= machine.name %></td>
     <td><%= machine.fqdn %></td>
     <td><%= machine.description %></td>
-    <td><%= machine.user.name %></td>
-    <td><%= machine.department.name %></td>
+    <td><%= link_to machine.user.name, {:controller => :users, :action => :show, :id => machine.user.id} %></td>
+    <td><%= link_to machine.department.name, {:controller => :departments, :action => :show, :id => machine.department.id} %></td>
     <td><%= machine.note %></td>
     <td><%= machine.old_ipaddr %></td>
     <td><%= link_to 'Show', machine %></td>
