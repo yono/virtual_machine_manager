@@ -1,4 +1,6 @@
 VirtualMachineManager::Application.routes.draw do
+  resources :places
+
   resources :departments
 
   resources :users
