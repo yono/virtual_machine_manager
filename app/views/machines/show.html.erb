@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @machine.name %>
+</p>
+
+<p>
+  <b>Ipaddr:</b>
+  <%= @machine.ipaddr %>
+</p>
+
+<p>
+  <b>Fqdn:</b>
+  <%= @machine.fqdn %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @machine.description %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @machine.note %>
+</p>
+
+<p>
+  <b>Old ipaddr:</b>
+  <%= @machine.old_ipaddr %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @machine.user_id %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @machine.department_id %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @machine.place_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_machine_path(@machine) %> |
+<%= link_to 'Back', machines_path %>

@@ -1,0 +1,39 @@
+<h1>Listing machines</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ipaddr</th>
+    <th>Fqdn</th>
+    <th>Description</th>
+    <th>Note</th>
+    <th>Old ipaddr</th>
+    <th>User</th>
+    <th>Department</th>
+    <th>Place</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @machines.each do |machine| %>
+  <tr>
+    <td><%= machine.name %></td>
+    <td><%= machine.ipaddr %></td>
+    <td><%= machine.fqdn %></td>
+    <td><%= machine.description %></td>
+    <td><%= machine.note %></td>
+    <td><%= machine.old_ipaddr %></td>
+    <td><%= machine.user_id %></td>
+    <td><%= machine.department_id %></td>
+    <td><%= machine.place_id %></td>
+    <td><%= link_to 'Show', machine %></td>
+    <td><%= link_to 'Edit', edit_machine_path(machine) %></td>
+    <td><%= link_to 'Destroy', machine, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Machine', new_machine_path %>
