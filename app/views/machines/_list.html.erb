@@ -1,0 +1,33 @@
+<table>
+  <tr>
+    <th>Place</th>
+    <th>Ipaddr</th>
+    <th>Name</th>
+    <th>Fqdn</th>
+    <th>Description</th>
+    <th>User</th>
+    <th>Department</th>
+    <th>Note</th>
+    <th>Old ipaddr</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @machines.each do |machine| %>
+  <tr>
+    <td><%= link_to machine.place.name, {:controller => :places, :action => :show, :id => machine.place.id} %></td>
+    <td><%= machine.ipaddr %></td>
+    <td><%= machine.name %></td>
+    <td><%= machine.fqdn %></td>
+    <td><%= machine.description %></td>
+    <td><%= link_to machine.user.name, {:controller => :users, :action => :show, :id => machine.user.id} %></td>
+    <td><%= link_to machine.department.name, {:controller => :departments, :action => :show, :id => machine.department.id} %></td>
+    <td><%= machine.note %></td>
+    <td><%= machine.old_ipaddr %></td>
+    <td><%= link_to 'Show', machine %></td>
+    <td><%= link_to 'Edit', edit_machine_path(machine) %></td>
+    <td><%= link_to 'Destroy', machine, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

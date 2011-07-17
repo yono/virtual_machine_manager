@@ -15,6 +15,8 @@ class DepartmentsController < ApplicationController
   def show
     @department = Department.find(params[:id])
 
+    @machines = Machine.find(:all, :conditions => {:department_id => @department})
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @department }

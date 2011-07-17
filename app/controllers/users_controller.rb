@@ -15,6 +15,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
+    @machines = Machine.find(:all, :conditions => {:user_id => @user})
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
