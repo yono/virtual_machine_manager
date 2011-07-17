@@ -14,6 +14,7 @@ class PlacesController < ApplicationController
   # GET /places/1.xml
   def show
     @place = Place.find(params[:id])
+    @machines = Machine.find(:all, :conditions => {:place_id => @place})
 
     respond_to do |format|
       format.html # show.html.erb
