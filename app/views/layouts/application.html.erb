@@ -8,13 +8,33 @@
 </head>
 <body>
 
+<div id="container">
+
+<div id="header">
 <a href="/machines">machines</a> |
  <a href="/places">places</a> |
  <a href="/users">users</a> |
  <a href="/departments">departments</a>
+</div>
 
+<div id="side">
+  <h2>Places</h2>
+  <ul>
+    <% Place.all.each do |place| %>
+      <li>
+      <%= link_to place.name, place %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div id="main">
 
 <%= yield %>
+
+</div>
+
+</div>
 
 </body>
 </html>

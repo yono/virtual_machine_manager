@@ -54,3 +54,20 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+#container {
+  width: 96%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+
+#side {
+  width: 9%;
+  float:left;
+}
+
+#main {
+  width: 90%;
+  float:right;
+}
