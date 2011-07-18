@@ -29,3 +29,5 @@ gem 'pg'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem 'web-app-theme', '>= 0.6.2'
